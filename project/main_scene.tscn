@@ -1,3 +1,45 @@
-[gd_scene format=3 uid="uid://dk1ofg2xlfpqw"]
+[gd_scene load_steps=3 format=3 uid="uid://dk1ofg2xlfpqw"]
+
+[ext_resource type="PackedScene" uid="uid://dfjm4pywq1fgd" path="res://wall.tscn" id="2_a7djt"]
+[ext_resource type="PackedScene" uid="uid://vo7cap2wjcxc" path="res://mouse_cursor.tscn" id="3_fxcsd"]
 
 [node name="MainScene" type="Node"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="MouseCursor" parent="." instance=ExtResource("3_fxcsd")]
+
+[node name="Wall" parent="." instance=ExtResource("2_a7djt")]
+position = Vector2(1500, 1000)
+rotation = 1.5708
+scale = Vector2(10, 2)
+
+[node name="Wall2" parent="." instance=ExtResource("2_a7djt")]
+position = Vector2(1280, 386)
+rotation = -0.598648
+scale = Vector2(6, 2)
+
+[node name="Wall3" parent="." instance=ExtResource("2_a7djt")]
+position = Vector2(1030, 1157)
+rotation = 1.88496
+scale = Vector2(4, 2)
+
+[node name="Wall4" parent="." instance=ExtResource("2_a7djt")]
+position = Vector2(711, 959)
+rotation = 0.446804
+scale = Vector2(10, 2)
+
+[node name="Wall5" parent="." instance=ExtResource("2_a7djt")]
+position = Vector2(654, 1834)
+rotation = -0.0174533
+scale = Vector2(8, 2)

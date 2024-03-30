@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://vo7cap2wjcxc"]
+
+[ext_resource type="Script" path="res://mouse_cursor.gd" id="1_jqomy"]
+[ext_resource type="Texture2D" uid="uid://dy5xucv8upwky" path="res://2d_lights_and_shadows_neutral_point_light.webp" id="2_m2fru"]
+
+[node name="MouseCursor" type="Node2D"]
+script = ExtResource("1_jqomy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = ExtResource("2_m2fru")
+texture_scale = 12.0

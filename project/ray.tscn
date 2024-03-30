@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds1sqj52hbwd8"]
+
+[ext_resource type="Script" path="res://ray.gd" id="1_1prch"]
+
+[node name="Ray" type="RayCast2D"]
+target_position = Vector2(200, 2.08165e-12)
+script = ExtResource("1_1prch")
+
+[node name="Line" type="Line2D" parent="."]
+width = 2.0
+default_color = Color(1, 1, 1, 0.392157)
+joint_mode = 2
+antialiased = true

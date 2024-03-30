@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfjm4pywq1fgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67nmf"]
+size = Vector2(128, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6yx1l"]
+cull_mode = 1
+polygon = PackedVector2Array(-64, -8, -64, 8, 64, 8, 64, -8)
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_67nmf")
+debug_color = Color(0.964706, 0, 0.498039, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -64.0
+offset_top = -8.0
+offset_right = 64.0
+offset_bottom = 8.0
+color = Color(0.219608, 0.54902, 0.505882, 1)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_6yx1l")
